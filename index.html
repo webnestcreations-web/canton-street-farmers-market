@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canton Street Farmers Market — Roswell, GA</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <style>body{margin:0;font-family:sans-serif;}</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
+```
+- Click **Commit changes**
+
+**Step 4:** Click **Add file → Create new file** again
+
+- Name it: `app.jsx`
+- Open the `canton-street-farmers-market.jsx` file I gave you, and paste the ENTIRE content — but make these 2 small edits first:
+
+**Edit 1** — Change the very first line from:
+```
+import { useState, useEffect, useRef } from "react";
+```
+to:
+```
+const { useState, useEffect, useRef } = React;
+```
+
+**Edit 2** — Near the bottom, find:
+```
+export default function CantonStreetFarmersMarket() {
+```
+Change it to:
+```
+function App() {
+```
+
+**Edit 3** — Add this at the very END of the file (after the last closing `}`):
+```
+ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
